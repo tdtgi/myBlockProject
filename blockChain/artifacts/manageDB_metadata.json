@@ -1,0 +1,885 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "Emp",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "eno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sex",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "age",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "position",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "major",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "time",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phone",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "edu",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "beginTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "endTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "school",
+								"type": "string"
+							}
+						],
+						"internalType": "struct manageDB.empStructF",
+						"name": "ff",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_eno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sex",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_age",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_position",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_major",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_time",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phone",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "edu",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "beginTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "endTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "school",
+								"type": "string"
+							}
+						],
+						"internalType": "struct manageDB.empStructF",
+						"name": "stf",
+						"type": "tuple"
+					}
+				],
+				"name": "addEmp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_deno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_dname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_dtime",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sal_status",
+						"type": "string"
+					}
+				],
+				"name": "addis",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_eno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_sex",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_age",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_position",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_major",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_time",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phone",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "edu",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "beginTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "endTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "school",
+								"type": "string"
+							}
+						],
+						"internalType": "struct manageDB.empStructF",
+						"name": "stf",
+						"type": "tuple"
+					}
+				],
+				"name": "changeEmp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_eno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_status",
+						"type": "string"
+					}
+				],
+				"name": "changeSalStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_eno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_status",
+						"type": "string"
+					}
+				],
+				"name": "changeStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_eno",
+						"type": "string"
+					}
+				],
+				"name": "delEmp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Aname",
+						"type": "string"
+					}
+				],
+				"name": "delMag",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_deno",
+						"type": "string"
+					}
+				],
+				"name": "deldis",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "dis",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "deno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "dname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "dtime",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sal_status",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "forName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "eno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sex",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "age",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "position",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "major",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "time",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phone",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "edu",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "beginTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "endTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "school",
+								"type": "string"
+							}
+						],
+						"internalType": "struct manageDB.empStructF",
+						"name": "ff",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDisKeys",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getKeys",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Aname",
+						"type": "string"
+					}
+				],
+				"name": "getMag",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "hetstore",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "interview",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "eno",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sex",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "age",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "position",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "major",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "time",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phone",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "edu",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "beginTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "endTime",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "school",
+								"type": "string"
+							}
+						],
+						"internalType": "struct manageDB.empStructF",
+						"name": "ff",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "mag",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Aname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "password",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "prEno",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_eno",
+						"type": "string"
+					}
+				],
+				"name": "queryEmp",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "eno",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "sex",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "age",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "position",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "code",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "major",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "time",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "phone",
+								"type": "string"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "status",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "edu",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "beginTime",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "endTime",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "school",
+										"type": "string"
+									}
+								],
+								"internalType": "struct manageDB.empStructF",
+								"name": "ff",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct manageDB.empStruct",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Aname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_password",
+						"type": "string"
+					}
+				],
+				"name": "setMag",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"dapp3.sol": "manageDB"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"dapp3.sol": {
+			"keccak256": "0x249f6fd93eabc4c3021927d2cb3f04a2060772b28ff608f95bc67cbb8676e587",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c5087936dc85990703a2dbb0cfb39d5516e188bd9d5a43afd875d38f9fb72ae7",
+				"dweb:/ipfs/QmTuoY6CYdqxTgaCRwxbdPKJn7A9irhY5LFwQ7z3Tre7dv"
+			]
+		}
+	},
+	"version": 1
+}
