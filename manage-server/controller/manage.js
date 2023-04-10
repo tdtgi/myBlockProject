@@ -1,5 +1,5 @@
 // 导入数据库操作模块
-const db = require('../db/index')
+//const db = require('../db/index')
 // 导入 bcryptjs 这个包
 const bcrypt = require('bcryptjs')
 // 导入生成 Token 的包

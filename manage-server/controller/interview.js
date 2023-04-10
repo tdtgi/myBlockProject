@@ -1,4 +1,4 @@
-const db = require('../db/index')
+//const db = require('../db/index')
 // 导入处理密码的模块
 const bcrypt = require('bcryptjs')
 const toArr=require('../toArr')

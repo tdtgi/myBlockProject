@@ -1,5 +1,5 @@
 // 导入数据库操作模块
-const db = require('../db/index')
+//const db = require('../db/index')
 const qs = require('Qs')
 const toArr=require('../toArr')
 // 导入处理密码的模块
