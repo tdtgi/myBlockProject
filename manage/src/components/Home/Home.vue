@@ -5,9 +5,10 @@
 
     <!-- 主体区域 -->
     <div class="main-box">
-
+      <div class="mainLeft">
       <!-- 左侧边栏区域 -->
       <Left></Left>
+      </div>
    
       <!-- 右侧内容主体区域 -->
       <div class="main-body">
@@ -39,11 +40,15 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  //flex-wrap: wrap;
+  //.mainLeft{
+  //  flex-direction: row;
+  //}
 
   .main-box {
     height: 100%;
     display: flex;
-    
+     flex-direction: column;
     .main-body {
       padding: 15px;
       flex: 1;

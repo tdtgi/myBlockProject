@@ -1,6 +1,10 @@
 <template>
   <div class="login-container">
+  <div class="atv">
+  <!--<img src="../../assets/002.png" class="imge" alt="">-->
+  </div>
     <div class="login-box">
+    
       <!-- 表单区域 -->
       <div class="form-login p-4">
         <!-- 登录名称 -->
@@ -29,8 +33,17 @@
         <!-- 登录和重置按钮 -->
         <div class="form-group form-inline d-flex justify-content-end">
          
-          <button type="button" class="btn btn-primary" @click="onLoginClick" style="width:500px;">
+          <button type="button" class="btn btn-primary" @click="onLoginClick" style="width:500px;" v-if="regView">
             登录
+          </button>
+          <button type="button" class="btn btn-danger" @click="onRegClick" style="width:500px;margin-top:5px;" v-if="regView">
+            注册
+          </button>
+          <button type="button" class="btn btn-success" @click="onFinClick" style="width:500px;margin-top:5px;" v-if="fina">
+            完成注册
+          </button>
+          <button type="button" class="btn btn-danger" @click="disFinClick" style="width:500px;margin-top:5px;" v-if="fina">
+            取消注册
           </button>
         </div>
       </div>
@@ -40,14 +53,17 @@
 
 <script>
 
-import {login} from '../../../utils/request'
+import {login,Reg} from '../../../utils/request'
 import { formToJSON } from 'axios'
+import { ElMessage } from 'element-plus'
 export default {
 name:'Login',
  data() {
     return {
       username: '',
       password: '',
+      regView:true,
+      fina:false
     }
   },
   created(){
@@ -55,6 +71,23 @@ name:'Login',
   },
   
   methods: {
+  async onRegClick(){
+   this.regView=false
+   this.fina=true
+  },
+  disFinClick(){
+  this.regView=true
+  this.fina=false
+  },
+  async onFinClick(){
+   await Reg({name:this.username,password:this.password})
+   this.regView=true
+   this.fina=false
+   ElMessage({
+    message: '注册成功',
+    type: 'success',
+  })
+  },
  
    async onLoginClick() {
       /*const {data:res}= await this.$http.post("/api/login",{name:this.username,password:this.password},{headers: {
@@ -66,7 +99,15 @@ name:'Login',
       if (data.token) {
         this.$router.push('/Home')
         localStorage.setItem('token', data.token)
+         ElMessage({
+        message: '登录成功',
+        type: 'success',
+      })
       } else {
+        ElMessage({
+        message: '用户名或密码错误',
+        type: 'error',
+      })
         localStorage.removeItem('token')
       }
     },
@@ -78,20 +119,39 @@ name:'Login',
 <style lang="less" scoped>
 .login-container {
   background-color: #35495e;
-  height: 100%;
+  height: 752px;
+  //width: 100%;
+  //width: 300px;
+  //border: 2px solid red;
+  .atv{
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #ef078a;
+    border: 1px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 17%;
+    left: 47%;
+    z-index: 999;
+    background-image: url("../../assets/002.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .login-box {
     width: 400px;
-    height: 250px;
-    background-color: #fff;
-    border-radius: 3px;
-    position: absolute;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    //box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(64, 0, 255);
     .form-login {
       position: absolute;
-      bottom: 0;
+      top: 100px;
       left: 0;
       width: 100%;
       box-sizing: border-box;

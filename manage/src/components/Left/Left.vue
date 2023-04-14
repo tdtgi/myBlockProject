@@ -5,9 +5,9 @@
       <li class="menu-item">
         <router-link to="/Home/Top">首页</router-link>
       </li>
-      <li class="menu-item">
+      <!--<li class="menu-item">
         <router-link to="/Home/sal">工资信息</router-link>
-      </li>
+      </li>-->
       <li class="menu-item">
         <router-link to="/Home/memberMsg">人员信息</router-link>
       </li>
@@ -32,14 +32,20 @@ name:'Left',
 .menu {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: row;
   .menu-item {
+    background-color: #efeff4;
+   border-radius: 5px;
+    flex-grow: 1;
+    text-align: center;
     line-height: 50px;
     font-weight: bold;
     font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     &:hover {
-      background-color: #efefef;
+      background-color: greenyellow;
       cursor: pointer;
     }
     a {

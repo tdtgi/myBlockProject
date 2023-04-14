@@ -1,30 +1,48 @@
 <template>
   <div class="box">
   <h4>公司总人数</h4>
-  <span>86人</span>
+  <span>{{total}}人</span>
   </div>
   <div class="box1">
   <h4>研发部</h4>
-  <span>26人</span>
+  <span>{{message.研发}}人</span>
   </div>
   <div class="box2">
   <h4>销售部</h4>
-  <span>30人</span>
+  <span>{{message.销售}}人</span>
   </div>
   <div class="box3">
   <h4>测试部</h4>
-  <span>14人</span>
+  <span>{{message.测试}}人</span>
   </div>
   <div class="box4">
-  <h4>后勤部</h4>
-  <span>10人</span>
+  <h4>后期部</h4>
+  <span>{{message.后期}}人</span>
   </div>
   
 </template>
 
 <script>
+import {empNum} from '../../../utils/request'
 export default {
 name:'Top',
+data(){
+  return{
+  message:{},
+  total:0
+  }
+},
+created(){
+this.getAll()
+},
+methods:{
+  async getAll(){
+    const {message:data}=await empNum()
+    this.message=data
+    this.total=data.研发+data.销售+data.测试+data.后期
+    //console.log()
+  }
+}
 }
 </script>
 
@@ -34,9 +52,9 @@ name:'Top',
   padding: 0;
 }
 .box{
-  top:100px;
+  top:140px;
   position:absolute;
-  margin-left:335px ;
+  margin-left:415px ;
   color: white;
   transition: all 0.2s linear;
   &:hover{
@@ -61,8 +79,8 @@ name:'Top',
 }
 .box1{
   position:absolute;
-  top:300px;
-  margin-left:50px ;
+  top:340px;
+  margin-left:130px ;
   color: white;
   transition: all 0.2s linear;
   &:hover{
@@ -87,8 +105,8 @@ name:'Top',
 }
 .box2{
   position:absolute;
-  top:300px;
-  margin-left:250px ;
+  top:340px;
+  margin-left:330px ;
   color: white;
   transition: all 0.2s linear;
   &:hover{
@@ -113,8 +131,8 @@ name:'Top',
 }
 .box3{
   position:absolute;
-  top:300px;
-  margin-left:450px ;
+  top:340px;
+  margin-left:530px ;
   color: white;
   transition: all 0.2s linear;
   &:hover{
@@ -139,8 +157,8 @@ name:'Top',
 }
 .box4{
   position:absolute;
-  top:300px;
-  margin-left:650px ;
+  top:340px;
+  margin-left:730px ;
   color: white;
   transition: all 0.2s linear;
   &:hover{

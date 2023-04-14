@@ -5,9 +5,20 @@ export const login=(data)=>api({
     method:'POST',
     data:qs.stringify(data)
 })
+export const Reg=(data)=>api({
+    url:'/api/reguser',
+    method:'POST',
+    data
+})
 
 export const empInfo=()=>api({
     url:'/my/empInfo',
+    method:'get'
+    
+})
+
+export const empNum=()=>api({
+    url:'/my/getNum',
     method:'get'
     
 })

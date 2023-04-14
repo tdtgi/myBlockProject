@@ -65,7 +65,12 @@
     </div>
         </el-form-item>
         <el-form-item label="职位" prop="position">
-          <el-input v-model="msg.position"></el-input>
+  <el-radio-group v-model="msg.position">
+         <el-radio label="研发">研发</el-radio>
+         <el-radio label="销售">销售</el-radio>
+         <el-radio label="测试">测试</el-radio>
+         <el-radio label="后勤">后勤</el-radio>
+  </el-radio-group>
         </el-form-item>
         <el-form-item label="国籍" prop="country">
           <el-input v-model="msg.country"></el-input>

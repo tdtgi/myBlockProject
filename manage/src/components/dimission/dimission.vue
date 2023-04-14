@@ -40,7 +40,7 @@
           size="small"
           type="primary"
           @click="handleReplace(scope.row.id,scope.row.eno)"
-          >Replace</el-button
+          >Reinstated</el-button
         >
         <el-button
           size="small"

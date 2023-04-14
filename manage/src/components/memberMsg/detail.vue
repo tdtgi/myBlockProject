@@ -3,7 +3,7 @@
   <h4 v-else-if="status=='2'" style="display:inline">（面试中）</h4>
   </h4>
   <div class="containTop">
-  <img src="../../assets/logo.png" alt="">
+  <img src="../../assets/001.png" alt="" style="width:200px;height:200px;margin-left: 20px;">
   <ul class="msg">
   <li>姓名：<input type="text" v-model="name" :disabled = "setdis" ></li>
   <li>性别：<input type="text" v-model="sex" :disabled = "setdis"></li>
@@ -153,7 +153,7 @@ methods: {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .containTop{
 position: relative;
 height: 270px;
@@ -164,7 +164,11 @@ height: 270px;
     list-style-type: none;
     padding-top:7px ;
     top: 0;
+    width: 650px;
     left:300px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     /*float: left;*/
 }
 .msg li{

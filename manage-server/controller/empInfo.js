@@ -8,6 +8,38 @@ const bcrypt = require('bcryptjs')
 const {mycontract,account} = require('../webFunction')
 const {changeKeys,addKeys} = require('../Regularity')
 
+exports.getNum = (req, res) => {
+  let poi={
+    研发:0,
+    销售:0,
+    测试:0,
+    后期:0,
+    total(){
+    return this.后期+this.测试+this.研发+this.销售
+    }
+
+  }
+  async function count (){
+    let results=[]
+    let tmp=[]
+    let keys = await mycontract.methods.getKeys().call()
+    for(let i=0;i<keys.length;i++){
+      tmp=await mycontract.methods.queryEmp(keys[i]).call()
+      tmp=addKeys(tmp)
+      if(tmp.status==0)results.push(await mycontract.methods.Emp(keys[i]).call())
+  } 
+  results=changeKeys(results)  
+  //console.log(poi.研发部)
+  for(let j=0;j<results.length;j++){
+      poi[results[j].position]++
+  }
+  //console.log(poi)
+  res.cc(poi,0)
+  
+    }
+  
+    count()
+}
 // 获取用户基本信息的处理函数
 exports.getempInfo = (req, res) => {
   
