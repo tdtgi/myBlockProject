@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.14+commit.80d49f37"
 	},
 	"language": "Solidity",
 	"output": {
@@ -873,11 +873,11 @@
 	},
 	"sources": {
 		"dapp3.sol": {
-			"keccak256": "0x249f6fd93eabc4c3021927d2cb3f04a2060772b28ff608f95bc67cbb8676e587",
+			"keccak256": "0x8afcf72cf0c7f2147de2a41582b5de2aa7509e3e3e90f750ff2553f76617f569",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c5087936dc85990703a2dbb0cfb39d5516e188bd9d5a43afd875d38f9fb72ae7",
-				"dweb:/ipfs/QmTuoY6CYdqxTgaCRwxbdPKJn7A9irhY5LFwQ7z3Tre7dv"
+				"bzz-raw://07d9553f061164276a20157eb1c7eb85b1ea599bf926b9a9d6e9cdd686c4595a",
+				"dweb:/ipfs/QmRHxSgYGE5ZZt9sk3mBobTBityyfau6Dh9pXkdsXsSneD"
 			]
 		}
 	},

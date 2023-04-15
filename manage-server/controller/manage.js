@@ -50,7 +50,8 @@ exports.regUser = (req, res) => {
   async function reg (){
     manInfo.password = bcrypt.hashSync(manInfo.password, 10)
     mycontract.methods.setMag(manInfo.name,manInfo.password).send({from:account,gas:1000000})
-    res.send({ status: 0, message: '注册成功！' })
+    .then(()=>{res.cc("注册成功",0)})
+    .catch((err)=>{res.cc(err,1)})
   }
     reg()
 }

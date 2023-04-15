@@ -60,6 +60,8 @@ contract manageDB{
        return prEno;
     }*/
     function setMag(string memory _Aname,string memory _password) public onlyOwner{
+        require(keccak256(abi.encodePacked(mag[_Aname].Aname)) == keccak256(abi.encodePacked("")),"this manager is already exist");
+         mag[_Aname].Aname=_Aname;
         mag[_Aname].password=_password;
         //Ano=_Ano;
     }

@@ -4,7 +4,7 @@
   <!--<img src="../../assets/002.png" class="imge" alt="">-->
   </div>
     <div class="login-box">
-    
+      
       <!-- 表单区域 -->
       <div class="form-login p-4">
         <!-- 登录名称 -->
@@ -17,6 +17,7 @@
             placeholder="请输入登录名称"
             autocomplete="off"
             v-model.trim="username"
+            :rules="rules"
           />
         </div>
         <!-- 登录密码 -->
@@ -30,7 +31,8 @@
             v-model.trim="password"
           />
         </div>
-        <!-- 登录和重置按钮 -->
+
+        <!-- 登录和注册按钮 -->
         <div class="form-group form-inline d-flex justify-content-end">
          
           <button type="button" class="btn btn-primary" @click="onLoginClick" style="width:500px;" v-if="regView">
@@ -60,6 +62,10 @@ export default {
 name:'Login',
  data() {
     return {
+      rules:{
+      username:[{required:true,message:"用户名不能为空",trigger:"blur"}],
+      password:[{required:true,message:"密码不能为空",trigger:"blur"}]
+      },
       username: '',
       password: '',
       regView:true,
@@ -80,13 +86,27 @@ name:'Login',
   this.fina=false
   },
   async onFinClick(){
-   await Reg({name:this.username,password:this.password})
+   const data= await Reg({name:this.username,password:this.password})
+   await this.$nextTick(()=>{
+     if(data.status==1){
+     
+     let reg=/(?<=(VM Exception while processing transaction: )).*/g
+     let mes=data.message.match(reg)
+     
+      ElMessage({
+    message: mes[0],
+   type: 'error',
+  })
+     }
+   else {
    this.regView=true
    this.fina=false
    ElMessage({
     message: '注册成功',
     type: 'success',
   })
+   }
+   })
   },
  
    async onLoginClick() {
