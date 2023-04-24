@@ -1,5 +1,5 @@
 import api from "./axios"
-import qs from 'QS'
+import qs from 'qs'
 export const login=(data)=>api({
     url:'/api/login',
     method:'POST',

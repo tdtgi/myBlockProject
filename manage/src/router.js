@@ -12,17 +12,17 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes: [
       { path: '/', redirect: '/Login' },
-      { path: '/Login', component: Login },
+      { path: '/Login', component: () => import('./components/Login/Login.vue')},
       { path: '/Home',
       redirect: '/Home/Top',
       component: Home,
       children:[
-      { path: 'Top', component: Top },
+      { path: 'Top', component: () => import('./components/Top/Top.vue') },
       { path: 'sal', component: sal },
-      { path: 'memberMsg', component: memberMsg },
-      { path: 'dimission', component: dimission },
-      { path: 'memberMsg/detail/:eid', component: detail ,props:true},
-      { path: 'interview', component: interview}
+      { path: 'memberMsg', component: () => import('./components/memberMsg/memberMsg.vue') },
+      { path: 'dimission', component:  () => import('./components/dimission/dimission.vue') },
+      { path: 'memberMsg/detail/:eid', component: () => import('./components/memberMsg/detail.vue') ,props:true},
+      { path: 'interview', component: () => import('./components/interview/interview.vue')}
       
     ],
 },
